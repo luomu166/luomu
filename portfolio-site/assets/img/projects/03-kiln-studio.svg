@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#120c08"/>
+      <stop offset="1" stop-color="#070504"/>
+    </linearGradient>
+    <linearGradient id="flame" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#ff5c33"/>
+      <stop offset="0.55" stop-color="#ff9a3c"/>
+      <stop offset="1" stop-color="#ffd166"/>
+    </linearGradient>
+    <radialGradient id="fireGlow" cx="0.5" cy="0.62" r="0.45">
+      <stop offset="0" stop-color="#ff7a33" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#ff7a33" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="grain3">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="800" fill="url(#bg3)"/>
+  <rect width="600" height="800" fill="url(#fireGlow)"/>
+
+  <!-- 圆形火焰轨道 -->
+  <circle cx="300" cy="330" r="172" fill="none" stroke="url(#flame)" stroke-opacity="0.75" stroke-width="2" stroke-dasharray="300 380" stroke-linecap="round" transform="rotate(-35 300 330)"/>
+  <circle cx="300" cy="330" r="148" fill="none" stroke="#ffffff" stroke-opacity="0.08"/>
+  <circle cx="300" cy="330" r="200" fill="none" stroke="#ffffff" stroke-opacity="0.06"/>
+
+  <!-- 窑字 -->
+  <text x="300" y="392" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="210" font-weight="900" fill="#f0f0ec">窑</text>
+  <text x="300" y="392" text-anchor="middle" font-family="'Noto Serif SC','Songti SC',serif" font-size="210" font-weight="900" fill="url(#flame)" opacity="0.32">窑</text>
+
+  <!-- 底部海报缩略网格 -->
+  <g transform="translate(60 560)">
+    <rect x="0" y="0" width="150" height="190" fill="#16120e" stroke="#ffffff" stroke-opacity="0.14"/>
+    <rect x="6" y="6" width="138" height="178" fill="none" stroke="#ff9a3c" stroke-opacity="0.3"/>
+    <circle cx="75" cy="70" r="26" fill="none" stroke="#ff9a3c" stroke-opacity="0.7"/>
+    <text x="75" y="150" text-anchor="middle" font-family="'Noto Serif SC',serif" font-size="34" fill="#f0f0ec">窑</text>
+
+    <rect x="170" y="0" width="150" height="190" fill="#16120e" stroke="#ffffff" stroke-opacity="0.14"/>
+    <path d="M185 160 L245 40 L305 160 Z" fill="none" stroke="#ffd166" stroke-opacity="0.7"/>
+    <text x="245" y="160" text-anchor="middle" font-family="Space Grotesk, Arial" font-size="16" letter-spacing="3" fill="#f0f0ec">KILN</text>
+
+    <rect x="340" y="0" width="150" height="190" fill="#16120e" stroke="#ffffff" stroke-opacity="0.14"/>
+    <rect x="355" y="70" width="120" height="90" fill="none" stroke="#ff7a33" stroke-opacity="0.7"/>
+    <text x="415" y="52" text-anchor="middle" font-family="'Noto Sans SC',sans-serif" font-size="18" fill="#f0f0ec">窑火</text>
+  </g>
+
+  <rect width="600" height="800" filter="url(#grain3)" opacity="0.06"/>
+
+  <text x="40" y="74" font-family="Space Grotesk, Arial, sans-serif" font-size="13" letter-spacing="5" fill="#ff9a3c">03 / 2024 — BRAND VISUAL</text>
+  <text x="40" y="536" font-family="Space Grotesk, Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="5" fill="#f0f0ec">KILN STUDIO</text>
+  <text x="42" y="560" font-family="'Noto Sans SC','PingFang SC',sans-serif" font-size="14" letter-spacing="6" fill="#9b9ba6">品牌视觉 · 海报设计</text>
+  <text x="560" y="74" text-anchor="end" font-family="Space Grotesk, Arial, sans-serif" font-size="12" letter-spacing="3" fill="#6f6f7a">600 × 800</text>
+</svg>

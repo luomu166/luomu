@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0a0a10"/>
+      <stop offset="0.72" stop-color="#10101a"/>
+      <stop offset="1" stop-color="#050508"/>
+    </linearGradient>
+    <radialGradient id="carGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#4dd8ff" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#4dd8ff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#eaf9ff" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#eaf9ff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2a2f3a"/>
+      <stop offset="1" stop-color="#0c0d12"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8fe7ff"/>
+      <stop offset="1" stop-color="#12303d"/>
+    </linearGradient>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#sky)"/>
+  <ellipse cx="400" cy="310" rx="380" ry="240" fill="url(#carGlow)"/>
+
+  <!-- 地平线 -->
+  <line x1="0" y1="396" x2="800" y2="396" stroke="#ffffff" stroke-opacity="0.14" stroke-width="1"/>
+
+  <!-- 地面透视网格 -->
+  <g stroke="#ffffff" stroke-opacity="0.06">
+    <path d="M0 420 H800 M0 452 H800 M0 494 H800 M0 548 H800"/>
+    <path d="M400 396 L-120 600 M400 396 L0 600 M400 396 L180 600 M400 396 L400 600 M400 396 L620 600 M400 396 L800 600 M400 396 L920 600"/>
+  </g>
+
+  <!-- 大灯光束 -->
+  <polygon points="150,358 12,330 12,392 150,376" fill="url(#beam)"/>
+  <ellipse cx="140" cy="364" rx="42" ry="16" fill="#eaf9ff" opacity="0.55"/>
+
+  <!-- 车身 -->
+  <path d="M140 400
+           C140 378 168 356 216 346
+           C238 340 268 336 300 334
+           C318 332 332 330 344 326
+           L400 318
+           C436 318 462 324 486 336
+           L540 336
+           C576 340 604 350 626 366
+           L660 380
+           L660 400
+           L620 400
+           C614 420 596 432 574 432
+           C552 432 534 422 528 402
+           L368 402
+           C362 422 344 432 322 432
+           C300 432 282 422 276 402
+           L140 400 Z" fill="url(#body)" stroke="#7b8598" stroke-opacity="0.5" stroke-width="1"/>
+
+  <!-- 车窗 -->
+  <path d="M340 330 L398 322 C424 322 444 327 460 335 L470 346 L326 346 Z" fill="url(#glass)"/>
+
+  <!-- 轮毂与轮胎 -->
+  <g>
+    <circle cx="300" cy="396" r="29" fill="#050507" stroke="#17181d" stroke-width="3"/>
+    <circle cx="300" cy="396" r="14" fill="none" stroke="#8fa3b8" stroke-opacity="0.8" stroke-width="2"/>
+    <circle cx="300" cy="396" r="4" fill="#4dd8ff"/>
+    <circle cx="548" cy="396" r="29" fill="#050507" stroke="#17181d" stroke-width="3"/>
+    <circle cx="548" cy="396" r="14" fill="none" stroke="#8fa3b8" stroke-opacity="0.8" stroke-width="2"/>
+    <circle cx="548" cy="396" r="4" fill="#4dd8ff"/>
+  </g>
+
+  <!-- 车底辉光 -->
+  <ellipse cx="400" cy="438" rx="270" ry="10" fill="#4dd8ff" opacity="0.14"/>
+
+  <!-- 速度线 -->
+  <g stroke="#ffffff" stroke-opacity="0.16">
+    <line x1="520" y1="300" x2="720" y2="300"/>
+    <line x1="560" y1="282" x2="700" y2="282"/>
+    <line x1="500" y1="372" x2="760" y2="372"/>
+    <line x1="560" y1="260" x2="660" y2="260"/>
+  </g>
+
+  <rect width="800" height="600" filter="url(#grain)" opacity="0.06"/>
+
+  <!-- 标题 -->
+  <text x="40" y="74" font-family="Space Grotesk, Arial, sans-serif" font-size="13" letter-spacing="5" fill="#4dd8ff">01 / 2025 — CAR RENDER</text>
+  <text x="40" y="540" font-family="Space Grotesk, Arial, sans-serif" font-size="52" font-weight="700" letter-spacing="6" fill="#f0f0ec">NIGHT DRIFT</text>
+  <text x="42" y="572" font-family="'Noto Sans SC','PingFang SC',sans-serif" font-size="17" letter-spacing="8" fill="#9b9ba6">夜驰</text>
+  <text x="760" y="540" text-anchor="end" font-family="Space Grotesk, Arial, sans-serif" font-size="12" letter-spacing="3" fill="#6f6f7a">BLENDER · CYCLES</text>
+  <text x="760" y="560" text-anchor="end" font-family="Space Grotesk, Arial, sans-serif" font-size="12" letter-spacing="3" fill="#6f6f7a">800 × 600</text>
+</svg>

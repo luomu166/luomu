@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d0d11"/>
+      <stop offset="1" stop-color="#070709"/>
+    </linearGradient>
+    <radialGradient id="core" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#d8ff66"/>
+      <stop offset="0.45" stop-color="#ccff4d" stop-opacity="0.65"/>
+      <stop offset="1" stop-color="#ccff4d" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#20202a"/>
+      <stop offset="1" stop-color="#0d0d12"/>
+    </linearGradient>
+    <filter id="grain2">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="800" fill="url(#bg2)"/>
+
+  <!-- 背景垂直线 -->
+  <g stroke="#ffffff" stroke-opacity="0.05">
+    <path d="M120 0 V800 M240 0 V800 M360 0 V800 M480 0 V800"/>
+    <path d="M0 130 H600 M0 260 H600 M0 520 H600 M0 650 H600 M0 780 H600"/>
+  </g>
+
+  <!-- 核心辉光 -->
+  <circle cx="300" cy="430" r="120" fill="url(#core)"/>
+
+  <!-- 肩部装甲 -->
+  <polygon points="220,290 380,290 404,360 360,376 300,360 240,376 196,360" fill="url(#metal)" stroke="#ccff4d" stroke-opacity="0.5" stroke-width="1"/>
+
+  <!-- 头部（六边形头盔） -->
+  <polygon points="248,178 300,150 352,178 352,252 300,280 248,252" fill="url(#metal)" stroke="#ccff4d" stroke-opacity="0.7" stroke-width="1.5"/>
+  <line x1="268" y1="218" x2="332" y2="218" stroke="#ccff4d" stroke-width="4"/>
+  <circle cx="300" cy="218" r="6" fill="#d8ff66"/>
+  <line x1="300" y1="252" x2="300" y2="290" stroke="#ccff4d" stroke-opacity="0.5" stroke-width="1.5"/>
+
+  <!-- 躯干 -->
+  <polygon points="238,388 362,388 336,548 264,548" fill="url(#metal)" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+
+  <!-- 机械臂 -->
+  <g stroke="#ccff4d" stroke-opacity="0.55" stroke-width="2" fill="none">
+    <path d="M240 356 L170 420 L170 470"/>
+    <path d="M360 356 L430 420 L430 470"/>
+    <circle cx="170" cy="420" r="8" fill="#0d0d12"/>
+    <circle cx="430" cy="420" r="8" fill="#0d0d12"/>
+  </g>
+
+  <!-- 核心能量球 -->
+  <circle cx="300" cy="430" r="30" fill="#0a0a0d" stroke="#ccff4d" stroke-width="2"/>
+  <circle cx="300" cy="430" r="17" fill="#d8ff66"/>
+  <circle cx="295" cy="425" r="5" fill="#ffffff" opacity="0.9"/>
+
+  <!-- 底部管线 -->
+  <g stroke="#ffffff" stroke-opacity="0.12">
+    <path d="M268 548 V620 H230 V680" fill="none"/>
+    <path d="M332 548 V640 H380 V680" fill="none"/>
+  </g>
+
+  <rect width="600" height="800" filter="url(#grain2)" opacity="0.06"/>
+
+  <!-- 标题 -->
+  <text x="40" y="74" font-family="Space Grotesk, Arial, sans-serif" font-size="13" letter-spacing="5" fill="#ccff4d">02 / 2024 — CHARACTER IP</text>
+  <text x="40" y="736" font-family="Space Grotesk, Arial, sans-serif" font-size="44" font-weight="700" letter-spacing="5" fill="#f0f0ec">MECH HEART</text>
+  <text x="42" y="768" font-family="'Noto Sans SC','PingFang SC',sans-serif" font-size="16" letter-spacing="8" fill="#9b9ba6">机核 · 城市主题赛第二名</text>
+  <text x="560" y="736" text-anchor="end" font-family="Space Grotesk, Arial, sans-serif" font-size="12" letter-spacing="3" fill="#6f6f7a">BLENDER · PS</text>
+  <text x="560" y="756" text-anchor="end" font-family="Space Grotesk, Arial, sans-serif" font-size="12" letter-spacing="3" fill="#6f6f7a">600 × 800</text>
+</svg>

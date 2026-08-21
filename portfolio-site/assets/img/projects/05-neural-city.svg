@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800">
+  <defs>
+    <linearGradient id="bg5" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b0a12"/>
+      <stop offset="1" stop-color="#050509"/>
+    </linearGradient>
+    <radialGradient id="neon" cx="0.5" cy="0.3" r="0.6">
+      <stop offset="0" stop-color="#7c6cff" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#7c6cff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="grain5">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="800" fill="url(#bg5)"/>
+  <rect width="600" height="800" fill="url(#neon)"/>
+
+  <!-- 建筑网格体（线框城市） -->
+  <g stroke="#7c6cff" stroke-opacity="0.55" fill="none" stroke-width="1">
+    <!-- 远层 -->
+    <path d="M70 520 L70 300 L130 300 L130 520"/>
+    <path d="M70 360 L130 360 M70 420 L130 420"/>
+    <path d="M470 520 L470 260 L530 260 L530 520"/>
+    <path d="M470 330 L530 330 M470 400 L530 400"/>
+
+    <!-- 中层 -->
+    <path d="M170 520 L170 200 L250 200 L250 520"/>
+    <path d="M170 250 L250 250 M170 310 L250 310 M170 380 L250 380 M170 450 L250 450"/>
+    <path d="M360 520 L360 230 L440 230 L440 520"/>
+    <path d="M360 280 L440 280 M360 350 L440 350 M360 420 L440 420"/>
+  </g>
+
+  <!-- 主塔 -->
+  <g stroke="#b7aaff" stroke-opacity="0.85" fill="none" stroke-width="1.4">
+    <path d="M260 560 L260 130 L340 130 L340 560"/>
+    <path d="M260 180 L340 180 M260 240 L340 240 M260 300 L340 300 M260 360 L340 360 M260 420 L340 420 M260 480 L340 480"/>
+    <path d="M280 130 V560 M320 130 V560"/>
+  </g>
+
+  <!-- 数据节点连线 -->
+  <g stroke="#ccff4d" stroke-opacity="0.7" stroke-width="1.2">
+    <path d="M80 300 L200 240 L280 180"/>
+    <path d="M520 260 L360 300 L340 360"/>
+    <path d="M250 200 L360 230"/>
+  </g>
+  <g fill="#ccff4d">
+    <circle cx="80" cy="300" r="3.5"/>
+    <circle cx="200" cy="240" r="3"/>
+    <circle cx="280" cy="180" r="4"/>
+    <circle cx="520" cy="260" r="3.5"/>
+    <circle cx="360" cy="300" r="3"/>
+    <circle cx="340" cy="360" r="4"/>
+  </g>
+
+  <!-- 悬浮核心 -->
+  <circle cx="300" cy="610" r="34" fill="none" stroke="#7c6cff" stroke-opacity="0.5"/>
+  <circle cx="300" cy="610" r="18" fill="#7c6cff" opacity="0.25"/>
+  <circle cx="300" cy="610" r="8" fill="#ccff4d"/>
+
+  <rect width="600" height="800" filter="url(#grain5)" opacity="0.06"/>
+
+  <text x="40" y="74" font-family="Space Grotesk, Arial, sans-serif" font-size="13" letter-spacing="5" fill="#7c6cff">05 / 2025 — AI CONCEPT</text>
+  <text x="40" y="736" font-family="Space Grotesk, Arial, sans-serif" font-size="44" font-weight="700" letter-spacing="5" fill="#f0f0ec">NEURAL CITY</text>
+  <text x="42" y="768" font-family="'Noto Sans SC','PingFang SC',sans-serif" font-size="16" letter-spacing="8" fill="#9b9ba6">神经城市 · 未来概念</text>
+  <text x="560" y="736" text-anchor="end" font-family="Space Grotesk, Arial, sans-serif" font-size="12" letter-spacing="3" fill="#6f6f7a">AI + PS</text>
+  <text x="560" y="756" text-anchor="end" font-family="Space Grotesk, Arial, sans-serif" font-size="12" letter-spacing="3" fill="#6f6f7a">600 × 800</text>
+</svg>

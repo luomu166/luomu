@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0e0e13"/>
+      <stop offset="1" stop-color="#08080b"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.38" r="0.6">
+      <stop offset="0" stop-color="#ccff4d" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#ccff4d" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="face" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1d1d25"/>
+      <stop offset="1" stop-color="#101016"/>
+    </linearGradient>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+
+  <rect width="640" height="800" fill="url(#bg)"/>
+  <rect width="640" height="800" fill="url(#glow)"/>
+
+  <!-- 网格 -->
+  <g stroke="#ffffff" stroke-opacity="0.05">
+    <path d="M0 100 H640 M0 200 H640 M0 300 H640 M0 400 H640 M0 500 H640 M0 600 H640 M0 700 H640"/>
+    <path d="M80 0 V800 M160 0 V800 M240 0 V800 M320 0 V800 M400 0 V800 M480 0 V800 M560 0 V800"/>
+  </g>
+
+  <!-- 头部剪影（抽象肖像占位） -->
+  <g transform="translate(320 330)">
+    <circle r="150" fill="none" stroke="#ffffff" stroke-opacity="0.10"/>
+    <circle r="120" fill="url(#face)" stroke="#ccff4d" stroke-opacity="0.35" stroke-width="1"/>
+    <path d="M-118 0 C-118 -86 -52 -130 8 -130 C68 -130 118 -72 118 0 Z" fill="url(#face)"/>
+    <!-- 面部轮廓线 -->
+    <path d="M-118 0 C-70 18 24 16 118 0" fill="none" stroke="#ccff4d" stroke-opacity="0.5" stroke-width="1.5"/>
+    <circle cx="46" cy="-38" r="4" fill="#ccff4d"/>
+    <path d="M38 -10 H76" stroke="#ffffff" stroke-opacity="0.4" stroke-width="2"/>
+    <path d="M-24 108 V138" stroke="#ffffff" stroke-opacity="0.2" stroke-width="1"/>
+    <path d="M-24 108 H-58" stroke="#ffffff" stroke-opacity="0.2" stroke-width="1"/>
+  </g>
+
+  <!-- 环形装饰 -->
+  <circle cx="320" cy="330" r="218" fill="none" stroke="#ffffff" stroke-opacity="0.07" stroke-dasharray="2 8"/>
+  <path d="M102 330 A218 218 0 0 1 538 330" fill="none" stroke="#ccff4d" stroke-opacity="0.3" stroke-width="1"/>
+
+  <rect width="640" height="800" filter="url(#grain)" opacity="0.05"/>
+
+  <!-- 文字 -->
+  <text x="40" y="92" font-family="Space Grotesk, Arial, sans-serif" font-size="13" letter-spacing="5" fill="#ccff4d">PORTRAIT</text>
+  <text x="40" y="742" font-family="Space Grotesk, 'Noto Sans SC', 'PingFang SC', sans-serif" font-size="20" letter-spacing="3" fill="#f0f0ec">廖昌林</text>
+  <text x="40" y="770" font-family="Space Grotesk, Arial, sans-serif" font-size="11" letter-spacing="3" fill="#6f6f7a">LIAO CHANGLIN — 占位图，请替换为本人照片</text>
+
+  <text x="600" y="742" text-anchor="end" font-family="Space Grotesk, Arial, sans-serif" font-size="12" letter-spacing="3" fill="#6f6f7a">EST. 2022</text>
+  <text x="600" y="762" text-anchor="end" font-family="Space Grotesk, Arial, sans-serif" font-size="12" letter-spacing="3" fill="#6f6f7a">640 × 800</text>
+</svg>

@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>廖昌林 · 视觉 / AI / 三维设计作品集</title>
+  <meta name="description" content="廖昌林 — 视觉设计师 / AI 设计师 / 品牌设计师 / 汽车渲染师 / 建模师。以三维渲染、AI 设计与影视后期为核心，让想象拥有质感。">
+  <meta name="theme-color" content="#0a0a0d">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+
+  <!-- 字体：Space Grotesk（英文展示体）+ Noto Sans SC / Noto Serif SC（中文） -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@600;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- 预加载开场 -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader-mark">LC</div>
+    <div class="preloader-line"><span></span></div>
+    <p class="preloader-text">LIAO CHANGLIN — PORTFOLIO</p>
+  </div>
+
+  <!-- 自定义光标（仅桌面设备） -->
+  <div class="cursor" id="cursor" aria-hidden="true">
+    <span class="cursor-dot"></span>
+    <span class="cursor-ring"></span>
+  </div>
+
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <!-- ======== 导航 ======== -->
+  <header class="site-header" id="siteHeader">
+    <nav class="nav container" aria-label="主导航">
+      <a class="brand" href="#home" aria-label="返回首页">
+        <span class="brand-mark">LC</span>
+        <span class="brand-name">廖昌林<em>LIAO CHANGLIN</em></span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#about" data-nav>01 · 关于</a></li>
+        <li><a href="#works" data-nav>02 · 项目</a></li>
+        <li><a href="#strengths" data-nav>03 · 能力</a></li>
+        <li><a href="#contact" data-nav>04 · 联系</a></li>
+      </ul>
+
+      <a class="btn btn-ghost nav-cta" href="#contact">联系我</a>
+
+      <button class="nav-burger" id="navBurger" aria-label="打开菜单" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- 移动端全屏菜单 -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav class="mobile-menu-inner" aria-label="移动端导航">
+      <a href="#about" data-nav><span>01</span>关于我</a>
+      <a href="#works" data-nav><span>02</span>精选项目</a>
+      <a href="#strengths" data-nav><span>03</span>个人能力</a>
+      <a href="#contact" data-nav><span>04</span>联系我</a>
+    </nav>
+    <div class="mobile-menu-foot">
+      <a href="tel:+8613320062340">+86 133 2006 2340</a>
+      <a href="mailto:1520623683@qq.com">1520623683@qq.com</a>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- ======== 1. 全屏 HERO ======== -->
+    <section class="hero" id="home">
+      <!-- 视频背景：把视频命名为 hero.mp4 放入 assets/media/ 即可自动启用 -->
+      <video class="hero-video" id="heroVideo" muted loop playsinline preload="metadata"
+             poster="assets/media/hero-poster.jpg" aria-hidden="true">
+        <source src="assets/media/hero.mp4" type="video/mp4">
+      </video>
+      <!-- 默认动态背景（Canvas 粒子场） -->
+      <canvas class="hero-canvas" id="heroCanvas" aria-hidden="true"></canvas>
+
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-noise" aria-hidden="true"></div>
+      <div class="hero-vignette" aria-hidden="true"></div>
+
+      <div class="hero-frame" aria-hidden="true">
+        <i></i><i></i><i></i><i></i>
+      </div>
+
+      <div class="hero-content container">
+        <p class="hero-eyebrow reveal">
+          <span class="eyebrow-dot"></span>
+          PORTFOLIO — 2022 / 2025 · 应届视觉设计师
+        </p>
+
+        <h1 class="hero-title">
+          <span class="line reveal" style="--d:.05s">让想象</span>
+          <span class="line reveal" style="--d:.15s">拥有<em>质感</em></span>
+        </h1>
+
+        <p class="hero-roles reveal" style="--d:.3s">
+          视觉设计师<span>·</span>AI 设计师<span>·</span>品牌设计师<span>·</span>汽车渲染师<span>·</span>建模师
+        </p>
+
+        <div class="hero-actions reveal" style="--d:.4s">
+          <a class="btn btn-primary" href="#works">查看作品<span class="btn-arrow">→</span></a>
+          <a class="btn btn-ghost" href="#contact">联系我</a>
+        </div>
+      </div>
+
+      <div class="hero-meta container" aria-hidden="true">
+        <p>江西陶瓷工艺美术职业技术学院<br>影视动画 · 全日制专科</p>
+        <p class="hero-meta-right">SCROLL<br><span class="hero-line"></span></p>
+      </div>
+    </section>
+
+    <!-- 技能跑马灯 -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <div class="marquee-group">
+          <span>BLENDER</span><i>✦</i><span>CINEMA 4D</span><i>✦</i><span>AFTER EFFECTS</span><i>✦</i>
+          <span>PHOTOSHOP</span><i>✦</i><span>三维动画</span><i>✦</i><span>后期渲染</span><i>✦</i>
+          <span>视频剪辑</span><i>✦</i><span>AI 辅助设计</span><i>✦</i><span>摄像摄影</span><i>✦</i>
+        </div>
+        <div class="marquee-group">
+          <span>BLENDER</span><i>✦</i><span>CINEMA 4D</span><i>✦</i><span>AFTER EFFECTS</span><i>✦</i>
+          <span>PHOTOSHOP</span><i>✦</i><span>三维动画</span><i>✦</i><span>后期渲染</span><i>✦</i>
+          <span>视频剪辑</span><i>✦</i><span>AI 辅助设计</span><i>✦</i><span>摄像摄影</span><i>✦</i>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======== 2. 关于 / 个人经历 ======== -->
+    <section class="section about" id="about">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-index">01 — ABOUT</p>
+          <h2>关于我</h2>
+          <p class="section-note">热爱 CG 与影视后期，<br>把每一次创作当作一次渲染。</p>
+        </header>
+
+        <div class="about-grid">
+          <!-- 肖像 -->
+          <div class="about-portrait reveal">
+            <figure class="portrait-frame">
+              <img src="assets/img/portrait.jpg" alt="廖昌林肖像照片" width="800" height="1000">
+              <figcaption class="portrait-caption">
+                <span>PORTRAIT</span>
+                <span>本人照片 · 2024</span>
+              </figcaption>
+            </figure>
+            <div class="portrait-badge" aria-hidden="true">LC<br><small>EST. 2022</small></div>
+          </div>
+
+          <!-- 介绍与信息 -->
+          <div class="about-body">
+            <p class="about-kicker reveal">HI, I'M 廖昌林</p>
+            <h3 class="about-name reveal">让想象拥有质感，<br>是我做设计的准则。</h3>
+
+            <div class="about-copy reveal">
+              <p>我是一名应届视觉设计师，主修影视动画，系统学习过摄像摄影、视频剪辑、三维建模、三维动画与后期渲染全流程。在校期间我始终对 CG 动画和影视后期保持高度热情，会为喜欢的东西剪短片——跑车、动漫人物、电影角色，都是我的灵感来源。</p>
+              <p>我有较强的解决问题能力与学习速度，积极参与社团活动、角色 IP 设计比赛与地方特色海报比赛，并利用假期接单，按客户要求完成视频剪辑与建模渲染。我相信 AI 与三维技术的结合，能让创意更快、更准地落地。</p>
+            </div>
+
+            <!-- 项目数据 -->
+            <div class="about-stats reveal" id="stats">
+              <div class="stat">
+                <strong><span data-count="3.6" data-decimal="1">0</span></strong>
+                <p>GPA <small>/ 4.0</small></p>
+              </div>
+              <div class="stat">
+                <strong>3 <small>/ 16</small></strong>
+                <p>专业排名</p>
+              </div>
+              <div class="stat">
+                <strong><span data-count="10">0</span>+</strong>
+                <p>社团活动策划</p>
+              </div>
+              <div class="stat">
+                <strong><span data-count="50">0</span>+</strong>
+                <p>活动拉新人数</p>
+              </div>
+            </div>
+
+            <!-- 联系方式 -->
+            <div class="about-contact reveal">
+              <div class="contact-row">
+                <span class="contact-label">电话</span>
+                <a href="tel:+8613320062340">133 2006 2340</a>
+              </div>
+              <div class="contact-row">
+                <span class="contact-label">邮箱</span>
+                <a href="mailto:1520623683@qq.com">1520623683@qq.com</a>
+              </div>
+              <div class="contact-row">
+                <span class="contact-label">作品集</span>
+                <a href="https://pan.baidu.com/s/1pH779Kr4SXuamzUveEAQUw?pwd=aft4" target="_blank" rel="noopener">百度网盘 · 提取码 aft4 ↗</a>
+              </div>
+            </div>
+
+            <!-- 技能标签 -->
+            <ul class="about-skills reveal">
+              <li>Blender</li>
+              <li>Cinema 4D</li>
+              <li>After Effects</li>
+              <li>Photoshop</li>
+              <li>三维建模</li>
+              <li>后期渲染</li>
+              <li>视频剪辑</li>
+              <li>合成特效</li>
+              <li>AI 辅助设计</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 经历与荣誉 -->
+        <div class="about-lower">
+          <div class="timeline reveal">
+            <h4 class="lower-title">教育 · 经历</h4>
+            <ol>
+              <li>
+                <time>2022.09 — 2025.06</time>
+                <h5>江西陶瓷工艺美术职业技术学院 <em>· 影视动画</em></h5>
+                <p>全日制专科 · 系统学习摄像摄影、视频剪辑、三维建模、三维动画与后期渲染全流程。</p>
+              </li>
+              <li>
+                <time>2024 — 2025</time>
+                <h5>假期个人接单 <em>· 剪辑 / 建模渲染</em></h5>
+                <p>按客户需求独立完成视频剪辑与三维建模渲染，从需求沟通到交付全流程负责。</p>
+              </li>
+              <li>
+                <time>在校期间</time>
+                <h5>艺术社团 <em>· 创意策划</em></h5>
+                <p>创新拉新模式，累计策划 10 场活动、拉新 50 人；负责社团海报设计与活动项目安排。</p>
+              </li>
+            </ol>
+          </div>
+
+          <div class="honors reveal">
+            <h4 class="lower-title">荣誉 · 证书</h4>
+            <ul>
+              <li><time>2024.05</time><p>优秀学生干部 · 一等优秀奖学金 · 校园“先进个人”</p></li>
+              <li><time>2024.05</time><p>城市主题 IP 设计比赛 · 第二名</p></li>
+              <li><time>2024.03</time><p>数字创意建模职业技能等级证书（中级）</p></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======== 3. 精选项目 ======== -->
+    <section class="section works" id="works">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-index">02 — SELECTED WORKS</p>
+          <h2>精选项目</h2>
+          <p class="section-note">11 件个人渲染作品<br><small>点击卡片可跳转作品集（百度网盘）· 标题与分类可随时自定义</small></p>
+        </header>
+      </div>
+
+      <div class="works-grid container">
+
+        <article class="work-card reveal" data-tilt>
+          <a href="https://pan.baidu.com/s/1pH779Kr4SXuamzUveEAQUw?pwd=aft4" target="_blank" rel="noopener" aria-label="个人作品 01，跳转作品集">
+            <figure class="work-media">
+              <img src="assets/img/projects/work-01.jpg" alt="个人作品 01" loading="lazy" width="1600" height="900">
+              <span class="work-hint">作品集 ↗</span>
+            </figure>
+            <div class="work-info">
+              <p class="work-index">WORK 01</p>
+              <h3>作品 01 <span>SELECTED</span></h3>
+              <p class="work-tags">个人渲染作品 · 2024–2025</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="work-card reveal" data-tilt>
+          <a href="https://pan.baidu.com/s/1pH779Kr4SXuamzUveEAQUw?pwd=aft4" target="_blank" rel="noopener" aria-label="个人作品 02，跳转作品集">
+            <figure class="work-media">
+              <img src="assets/img/projects/work-02.jpg" alt="个人作品 02" loading="lazy" width="1600" height="900">
+              <span class="work-hint">作品集 ↗</span>
+            </figure>
+            <div class="work-info">
+              <p class="work-index">WORK 02</p>
+              <h3>作品 02 <span>SELECTED</span></h3>
+              <p class="work-tags">个人渲染作品 · 2024–2025</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="work-card reveal" data-tilt>
+          <a href="https://pan.baidu.com/s/1pH779Kr4SXuamzUveEAQUw?pwd=aft4" target="_blank" rel="noopener" aria-label="个人作品 03，跳转作品集">
+            <figure class="work-media">
+              <img src="assets/img/projects/work-03.jpg" alt="个人作品 03" loading="lazy" width="1600" height="900">
+              <span class="work-hint">作品集 ↗</span>
+            </figure>
+            <div class="work-info">
+              <p class="work-index">WORK 03</p>
+              <h3>作品 03 <span>SELECTED</span></h3>
+              <p class="work-tags">个人渲染作品 · 2024–2025</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="work-card reveal" data-tilt>
+          <a href="https://pan.baidu.com/s/1pH779Kr4SXuamzUveEAQUw?pwd=aft4" target="_blank" rel="noopener" aria-label="个人作品 04，跳转作品集">
+            <figure class="work-media">
+              <img src="assets/img/projects/work-04.jpg" alt="个人作品 04" loading="lazy" width="1600" height="900">
+              <span class="work-hint">作品集 ↗</span>
+            </figure>
+            <div class="work-info">
+              <p class="work-index">WORK 04</p>
+              <h3>作品 04 <span>SELECTED</span></h3>
+              <p class="work-tags">个人渲染作品 · 2024–2025</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="work-card reveal" data-tilt>
+          <a href="https://pan.baidu.com/s/1pH779Kr4SXuamzUveEAQUw?pwd=aft4" target="_blank" rel="noopener" aria-label="个人作品 05，跳转作品集">
+            <figure class="work-media">
+              <img src="assets/img/projects/work-05.jpg" alt="个人作品 05" loading="lazy" width="1600" height="900">
+              <span class="work-hint">作品集 ↗</span>
+            </figure>
+            <div class="work-info">
+              <p class="work-index">WORK 05</p>
+              <h3>作品 05 <span>SELECTED</span></h3>
+              <p class="work-tags">个人渲染作品 · 2024–2025</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="work-card reveal" data-tilt>
+          <a href="https://pan.baidu.com/s/1pH779Kr4SXuamzUveEAQUw?pwd=aft4" target="_blank" rel="noopener" aria-label="个人作品 06，跳转作品集">
+            <figure class="work-media">
+              <img src="assets/img/projects/work-06.jpg" alt="个人作品 06" loading="lazy" width="1600" height="900">
+              <span class="work-hint">作品集 ↗</span>
+            </figure>
+            <div class="work-info">
+              <p class="work-index">WORK 06</p>
+              <h3>作品 06 <span>SELECTED</span></h3>
+              <p class="work-tags">个人渲染作品 · 2024–2025</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="work-card reveal" data-tilt>
+          <a href="https://pan.baidu.com/s/1pH779Kr4SXuamzUveEAQUw?pwd=aft4" target="_blank" rel="noopener" aria-label="个人作品 07，跳转作品集">
+            <figure class="work-media">
+              <img src="assets/img/projects/work-07.jpg" alt="个人作品 07" loading="lazy" width="1600" height="900">
+              <span class="work-hint">作品集 ↗</span>
+            </figure>
+            <div class="work-info">
+              <p class="work-index">WORK 07</p>
+              <h3>作品 07 <span>SELECTED</span></h3>
+              <p class="work-tags">个人渲染作品 · 2024–2025</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="work-card reveal" data-tilt>
+          <a href="https://pan.baidu.com/s/1pH779Kr4SXuamzUveEAQUw?pwd=aft4" target="_blank" rel="noopener" aria-label="个人作品 08，跳转作品集">
+            <figure class="work-media">
+              <img src="assets/img/projects/work-08.jpg" alt="个人作品 08" loading="lazy" width="1600" height="900">
+              <span class="work-hint">作品集 ↗</span>
+            </figure>
+            <div class="work-info">
+              <p class="work-index">WORK 08</p>
+              <h3>作品 08 <span>SELECTED</span></h3>
+              <p class="work-tags">个人渲染作品 · 2024–2025</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="work-card reveal" data-tilt>
+          <a href="https://pan.baidu.com/s/1pH779Kr4SXuamzUveEAQUw?pwd=aft4" target="_blank" rel="noopener" aria-label="个人作品 09，跳转作品集">
+            <figure class="work-media">
+              <img src="assets/img/projects/work-09.jpg" alt="个人作品 09" loading="lazy" width="1600" height="900">
+              <span class="work-hint">作品集 ↗</span>
+            </figure>
+            <div class="work-info">
+              <p class="work-index">WORK 09</p>
+              <h3>作品 09 <span>SELECTED</span></h3>
+              <p class="work-tags">个人渲染作品 · 2024–2025</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="work-card reveal" data-tilt>
+          <a href="https://pan.baidu.com/s/1pH779Kr4SXuamzUveEAQUw?pwd=aft4" target="_blank" rel="noopener" aria-label="个人作品 10，跳转作品集">
+            <figure class="work-media">
+              <img src="assets/img/projects/work-10.jpg" alt="个人作品 10" loading="lazy" width="1600" height="900">
+              <span class="work-hint">作品集 ↗</span>
+            </figure>
+            <div class="work-info">
+              <p class="work-index">WORK 10</p>
+              <h3>作品 10 <span>SELECTED</span></h3>
+              <p class="work-tags">个人渲染作品 · 2024–2025</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="work-card reveal" data-tilt>
+          <a href="https://pan.baidu.com/s/1pH779Kr4SXuamzUveEAQUw?pwd=aft4" target="_blank" rel="noopener" aria-label="个人作品 11，跳转作品集">
+            <figure class="work-media">
+              <img src="assets/img/projects/work-11.jpg" alt="个人作品 11" loading="lazy" width="1600" height="900">
+              <span class="work-hint">作品集 ↗</span>
+            </figure>
+            <div class="work-info">
+              <p class="work-index">WORK 11</p>
+              <h3>作品 11 <span>SELECTED</span></h3>
+              <p class="work-tags">个人渲染作品 · 2024–2025</p>
+            </div>
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ======== 4. 个人优势 ======== -->
+    <section class="section strengths" id="strengths">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-index">03 — CAPABILITIES</p>
+          <h2>个人优势</h2>
+          <p class="section-note">从概念到成品，<br>一整套可落地的设计能力。</p>
+        </header>
+
+        <div class="strengths-grid">
+
+          <article class="strength-card reveal" style="--d:.05s">
+            <div class="strength-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none"><path d="M10 8h28v32H10z" stroke="currentColor"/><path d="M10 17h28M17 8v32M24 17v23" stroke="currentColor"/><circle cx="24" cy="28" r="4" stroke="currentColor"/></svg>
+            </div>
+            <p class="strength-index">A / 01</p>
+            <h3>视觉设计</h3>
+            <p>海报、品牌视觉、图片精修，Blender + PS 全流程动画制作，审美克制、执行完整。</p>
+          </article>
+
+          <article class="strength-card reveal" style="--d:.1s">
+            <div class="strength-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none"><path d="M24 6l4 10 10 4-10 4-4 10-4-10-10-4 10-4z" stroke="currentColor"/><path d="M39 32l2 5 5 2-5 2-2 5-2-5-5-2 5-2z" stroke="currentColor"/></svg>
+            </div>
+            <p class="strength-index">A / 02</p>
+            <h3>AI 设计</h3>
+            <p>AI 辅助创意发散与概念设计，快速产出高质量视觉方案，再用三维与后期落到成品。</p>
+          </article>
+
+          <article class="strength-card reveal" style="--d:.15s">
+            <div class="strength-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none"><path d="M8 14l16-7 16 7v20l-16 7-16-7z" stroke="currentColor"/><path d="M8 14l16 7 16-7M24 21v20" stroke="currentColor"/></svg>
+            </div>
+            <p class="strength-index">A / 03</p>
+            <h3>品牌设计</h3>
+            <p>社团与地方特色海报、IP 设计比赛实战经验，懂创意策划，也懂让视觉为活动服务。</p>
+          </article>
+
+          <article class="strength-card reveal" style="--d:.2s">
+            <div class="strength-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none"><path d="M6 34h36" stroke="currentColor"/><path d="M10 34c0-12 28-12 28 0M14 34c0-7 20-7 20 0M18 34c0-4 12-4 12 0" stroke="currentColor"/><circle cx="24" cy="34" r="2" fill="currentColor"/></svg>
+            </div>
+            <p class="strength-index">A / 04</p>
+            <h3>汽车渲染</h3>
+            <p>热爱跑车题材，擅长汽车三维渲染，用光影与材质表现速度感和机械质感。</p>
+          </article>
+
+          <article class="strength-card reveal" style="--d:.25s">
+            <div class="strength-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none"><path d="M12 8h16l8 8v24H12z" stroke="currentColor"/><path d="M28 8v8h8" stroke="currentColor"/><path d="M18 27l4-4 3 3 5-6" stroke="currentColor"/><circle cx="19" cy="24" r="1.5" fill="currentColor"/></svg>
+            </div>
+            <p class="strength-index">A / 05</p>
+            <h3>三维建模</h3>
+            <p>角色、产品、场景建模，扎实的空间造型能力，善于把参考图变成可用的三维资产。</p>
+          </article>
+
+          <article class="strength-card reveal" style="--d:.3s">
+            <div class="strength-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none"><rect x="8" y="10" width="32" height="20" rx="2" stroke="currentColor"/><path d="M22 30v8h-6M32 30v8h-6M14 22h6M14 26h4" stroke="currentColor"/><path d="M24 38l-1 2M24 38l1 2" stroke="currentColor"/></svg>
+            </div>
+            <p class="strength-index">A / 06</p>
+            <h3>视频后期</h3>
+            <p>摄像摄影、剪辑、AE 合成特效、后期渲染，从素材拍摄到成片输出的完整链路。</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======== 5. 联系 ======== -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="contact-inner reveal">
+          <p class="section-index">04 — CONTACT</p>
+          <h2>有项目想聊聊？<br>让创意<em>落地</em>。</h2>
+          <p class="contact-sub">当前接受实习 / 全职 / 接单合作，欢迎随时联系。</p>
+
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="mailto:1520623683@qq.com?subject=合作咨询%20—%20廖昌林作品集">
+              <span class="btn-mail">✉</span> 发送邮件
+            </a>
+            <a class="btn btn-ghost" href="tel:+8613320062340">拨打电话</a>
+            <a class="btn btn-link" href="https://pan.baidu.com/s/1pH779Kr4SXuamzUveEAQUw?pwd=aft4" target="_blank" rel="noopener">完整作品集 ↗</a>
+          </div>
+
+          <div class="contact-links">
+            <a href="tel:+8613320062340">133 2006 2340</a>
+            <a href="mailto:1520623683@qq.com">1520623683@qq.com</a>
+            <a href="https://pan.baidu.com/s/1pH779Kr4SXuamzUveEAQUw?pwd=aft4" target="_blank" rel="noopener">百度网盘作品集 · aft4</a>
+          </div>
+        </div>
+
+        <footer class="site-footer">
+          <p class="footer-brand"><span class="brand-mark">LC</span> 廖昌林 LIAO CHANGLIN</p>
+          <p class="footer-meta">
+            视觉设计师 · AI 设计师 · 品牌设计师 · 汽车渲染师 · 建模师
+          </p>
+          <p class="footer-copy">© <span id="year">2026</span> LIAO CHANGLIN. 保留所有权利。</p>
+          <a class="to-top" href="#home" aria-label="回到顶部">TOP ↑</a>
+        </footer>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

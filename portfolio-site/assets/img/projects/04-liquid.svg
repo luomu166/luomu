@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bg4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0a0b0f"/>
+      <stop offset="1" stop-color="#060608"/>
+    </linearGradient>
+    <radialGradient id="light" cx="0.5" cy="0.12" r="0.55">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="chrome" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f5f7fa"/>
+      <stop offset="0.22" stop-color="#9aa7b5"/>
+      <stop offset="0.45" stop-color="#313845"/>
+      <stop offset="0.6" stop-color="#d8dee6"/>
+      <stop offset="0.8" stop-color="#4dd8ff"/>
+      <stop offset="1" stop-color="#11151b"/>
+    </linearGradient>
+    <radialGradient id="blobGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#4dd8ff" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#4dd8ff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="grain4">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bg4)"/>
+  <rect width="800" height="600" fill="url(#light)"/>
+
+  <!-- 背景圆环 -->
+  <circle cx="400" cy="270" r="190" fill="none" stroke="#ffffff" stroke-opacity="0.06"/>
+  <circle cx="400" cy="270" r="220" fill="none" stroke="#ffffff" stroke-opacity="0.04"/>
+
+  <!-- 主产品：液态金属球 -->
+  <ellipse cx="400" cy="275" rx="170" ry="170" fill="url(#blobGlow)"/>
+  <path d="M400 112
+           C512 112 582 190 582 278
+           C582 368 508 444 400 444
+           C292 444 218 368 218 278
+           C218 190 288 112 400 112 Z"
+        fill="url(#chrome)"/>
+  <path d="M300 165 C350 140 430 140 478 175" fill="none" stroke="#ffffff" stroke-opacity="0.75" stroke-width="6" stroke-linecap="round"/>
+  <ellipse cx="330" cy="300" rx="52" ry="34" fill="#ffffff" opacity="0.1" transform="rotate(-18 330 300)"/>
+
+  <!-- 液滴 -->
+  <g fill="url(#chrome)">
+    <path d="M620 330 c0 -22 16 -38 16 -58 c0 20 16 36 16 58 c0 18 -14 32 -32 32 c-18 0 -32 -14 -32 -32 z" transform="scale(0.75) translate(180 120)"/>
+    <path d="M160 360 c0 -14 10 -24 10 -36 c0 12 10 22 10 36 c0 11 -9 20 -20 20 c-11 0 -20 -9 -20 -20 z"/>
+  </g>
+
+  <!-- 地面与倒影 -->
+  <line x1="0" y1="470" x2="800" y2="470" stroke="#ffffff" stroke-opacity="0.12"/>
+  <ellipse cx="400" cy="478" rx="200" ry="16" fill="#4dd8ff" opacity="0.12"/>
+  <path d="M400 476 C512 476 582 470 582 468 C582 530 508 556 400 556 C292 556 218 530 218 468 C218 470 288 476 400 476 Z" fill="url(#chrome)" opacity="0.16"/>
+
+  <rect width="800" height="600" filter="url(#grain4)" opacity="0.06"/>
+
+  <text x="40" y="74" font-family="Space Grotesk, Arial, sans-serif" font-size="13" letter-spacing="5" fill="#4dd8ff">04 / 2024 — PRODUCT FILM</text>
+  <text x="40" y="548" font-family="Space Grotesk, Arial, sans-serif" font-size="52" font-weight="700" letter-spacing="6" fill="#f0f0ec">LIQUID 03</text>
+  <text x="42" y="578" font-family="'Noto Sans SC','PingFang SC',sans-serif" font-size="17" letter-spacing="8" fill="#9b9ba6">液态 · 产品广告</text>
+  <text x="760" y="548" text-anchor="end" font-family="Space Grotesk, Arial, sans-serif" font-size="12" letter-spacing="3" fill="#6f6f7a">BLENDER / C4D</text>
+  <text x="760" y="568" text-anchor="end" font-family="Space Grotesk, Arial, sans-serif" font-size="12" letter-spacing="3" fill="#6f6f7a">800 × 600</text>
+</svg>

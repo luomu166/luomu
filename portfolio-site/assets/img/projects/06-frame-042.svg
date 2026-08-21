@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800">
+  <defs>
+    <linearGradient id="bg6" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0c0c10"/>
+      <stop offset="1" stop-color="#070709"/>
+    </linearGradient>
+    <linearGradient id="sky6" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#10141d"/>
+      <stop offset="1" stop-color="#1d2432"/>
+    </linearGradient>
+    <linearGradient id="mountain" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2a3242"/>
+      <stop offset="1" stop-color="#0d1016"/>
+    </linearGradient>
+    <radialGradient id="sun6" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#e8f7ff"/>
+      <stop offset="0.55" stop-color="#4dd8ff" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#4dd8ff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="grain6">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="800" fill="url(#bg6)"/>
+
+  <!-- 胶片感光框 -->
+  <rect x="90" y="230" width="420" height="280" fill="url(#sky6)" stroke="#ffffff" stroke-opacity="0.28"/>
+
+  <!-- 场景：太阳与山 -->
+  <circle cx="300" cy="350" r="120" fill="url(#sun6)"/>
+  <circle cx="300" cy="350" r="44" fill="#dff6ff"/>
+  <path d="M90 510 L190 380 L250 450 L330 340 L420 440 L510 380 L510 510 Z" fill="url(#mountain)"/>
+  <path d="M90 510 L260 440 L360 500 L510 450 L510 510 Z" fill="#0d1016"/>
+
+  <!-- 场景网格 -->
+  <g stroke="#4dd8ff" stroke-opacity="0.18">
+    <path d="M90 300 H510 M90 360 H510 M90 420 H510"/>
+    <path d="M150 230 V510 M250 230 V510 M350 230 V510 M450 230 V510"/>
+  </g>
+
+  <!-- 时间码与边框 -->
+  <g fill="#f0f0ec" font-family="Space Grotesk, Arial, sans-serif">
+    <text x="104" y="258" font-size="12" letter-spacing="3" fill="#4dd8ff">REC ●</text>
+    <text x="104" y="278" font-size="10" letter-spacing="3" opacity="0.7">00:01:42:17</text>
+    <text x="496" y="278" text-anchor="end" font-size="10" letter-spacing="3" opacity="0.7">BLENDER / AE</text>
+  </g>
+
+  <!-- 胶片齿孔 -->
+  <g fill="#ffffff" opacity="0.16">
+    <rect x="72" y="258" width="8" height="6" rx="1"/><rect x="72" y="280" width="8" height="6" rx="1"/>
+    <rect x="72" y="302" width="8" height="6" rx="1"/><rect x="72" y="324" width="8" height="6" rx="1"/>
+    <rect x="72" y="346" width="8" height="6" rx="1"/><rect x="72" y="368" width="8" height="6" rx="1"/>
+    <rect x="72" y="390" width="8" height="6" rx="1"/><rect x="72" y="412" width="8" height="6" rx="1"/>
+    <rect x="72" y="434" width="8" height="6" rx="1"/><rect x="72" y="456" width="8" height="6" rx="1"/>
+    <rect x="520" y="258" width="8" height="6" rx="1"/><rect x="520" y="280" width="8" height="6" rx="1"/>
+    <rect x="520" y="302" width="8" height="6" rx="1"/><rect x="520" y="324" width="8" height="6" rx="1"/>
+    <rect x="520" y="346" width="8" height="6" rx="1"/><rect x="520" y="368" width="8" height="6" rx="1"/>
+    <rect x="520" y="390" width="8" height="6" rx="1"/><rect x="520" y="412" width="8" height="6" rx="1"/>
+    <rect x="520" y="434" width="8" height="6" rx="1"/><rect x="520" y="456" width="8" height="6" rx="1"/>
+  </g>
+
+  <rect width="600" height="800" filter="url(#grain6)" opacity="0.06"/>
+
+  <text x="40" y="74" font-family="Space Grotesk, Arial, sans-serif" font-size="13" letter-spacing="5" fill="#ccff4d">06 / 2025 — CG FILM</text>
+  <text x="40" y="736" font-family="Space Grotesk, Arial, sans-serif" font-size="44" font-weight="700" letter-spacing="5" fill="#f0f0ec">FRAME 042</text>
+  <text x="42" y="768" font-family="'Noto Sans SC','PingFang SC',sans-serif" font-size="16" letter-spacing="8" fill="#9b9ba6">帧 · CG 动画静帧</text>
+  <text x="560" y="736" text-anchor="end" font-family="Space Grotesk, Arial, sans-serif" font-size="12" letter-spacing="3" fill="#6f6f7a">600 × 800</text>
+</svg>
